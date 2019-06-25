@@ -13,12 +13,15 @@ export class AppComponent implements OnInit {
   constructor(private dataService: DataService) { }
 
   ngOnInit() {
-    this.getData();
   }
 
   getData() {
     this.dataService.getData().subscribe(
       data => this.data = data
     );
+  }
+
+  requestData() {
+    this.getData();
   }
 }
